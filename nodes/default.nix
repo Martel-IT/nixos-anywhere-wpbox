@@ -11,7 +11,7 @@ let
   mkNode = system: config: nixosSystem {
     inherit system;
     modules = [
-      disko.nixosModules
+      disko.nixosModules.disko
       config
     ];
   };
