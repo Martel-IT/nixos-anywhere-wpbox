@@ -2,14 +2,14 @@
   disko.devices = {
     disk = {
       
-      # --- DISCO 1: OS & BOOT (50GB) ---
+      # --- DISCO 1: OS & BOOT (Root Volume) ---
       main = {
         type = "disk";
         device = "/dev/nvme0n1";
         content = {
           type = "gpt";
           partitions = {
-            # Partizione di Boot (UEFI)
+            #(UEFI)
             ESP = {
               priority = 1;
               name = "ESP";
@@ -24,7 +24,7 @@
               };
             };
             
-            # Partizione Root (OS)
+            #Root (OS)
             root = {
               size = "100%";
               content = {
@@ -38,7 +38,7 @@
         };
       };
 
-      # --- DISCO 2: DATA WORDPRESS (100GB) ---
+      # --- DISCO 2: DATA WORDPRESS
       data = {
         type = "disk";
         device = "/dev/nvme1n1";

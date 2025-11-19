@@ -2,9 +2,11 @@
 {
   
   imports = [ 
-    "${modulesPath}/virtualisation/amazon-image.nix" 
+
+    "${modulesPath}/virtualisation/amazon-image.nix"
     ../../disko-config.nix
-  ];  
+  
+  ];
   
   ec2.efi = true;
 

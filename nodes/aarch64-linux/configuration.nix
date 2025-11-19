@@ -1,6 +1,12 @@
 { config, lib, pkgs, modulesPath,  ... }:
 {
-  imports = [ "${modulesPath}/virtualisation/amazon-image.nix" ./disko-config.nix ];
+  imports = [ 
+
+    "${modulesPath}/virtualisation/amazon-image.nix"
+    ../../disko-config.nix
+  
+  ];
+  
   ec2.efi = true;
 
   networking.hostName = "wpbox-aarch64";

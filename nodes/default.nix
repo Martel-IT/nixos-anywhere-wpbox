@@ -1,11 +1,6 @@
-#
-# Function to generate the NixOS configurations for the Flake output.
-#
 {
-  # `lib.nixosSystem` in the selected Nixpkgs.
   nixosSystem,
-  # The Flake itself.
-  self
+  disko 
 }:
 let
   mkNode = system: config: nixosSystem {
