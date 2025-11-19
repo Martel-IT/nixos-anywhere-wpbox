@@ -6,7 +6,7 @@
     ../../disko-config.nix
   
   ];
-  
+
   ec2.efi = true;
 
   networking.hostName = "wpbox-aarch64";
@@ -33,7 +33,7 @@
   services.openssh = {
     enable = true;
     settings = {
-      PermitRootLogin = "yes";
+      PermitRootLogin = lib.mkForce "yes";
       PasswordAuthentication = false;
     };
   };
