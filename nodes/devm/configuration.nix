@@ -2,14 +2,12 @@
 {
   imports = [ 
 
-    "${modulesPath}/virtualisation/amazon-image.nix"
+    ./hardware-configuration.nix
     ./disko-config.nix
   
   ];
 
-  ec2.efi = true;
-
-  networking.hostName = "wpbox-aarch64";
+  networking.hostName = "wpbox-devm";
   time.timeZone = "Europe/Amsterdam";
 
   # Root user con password vuota (può loggare dalla console)
@@ -33,7 +31,7 @@
   services.openssh = {
     enable = true;
     settings = {
-      PermitRootLogin = lib.mkForce "yes";
+      PermitRootLogin = "yes";
       PasswordAuthentication = false;
     };
   };
