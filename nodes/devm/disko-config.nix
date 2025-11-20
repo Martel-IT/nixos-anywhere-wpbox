@@ -37,25 +37,25 @@
         };
       };
 
-      # --- DISCO 2: DATA WORDPRESS
-      data = {
-        type = "disk";
-        device = "/dev/sdb";
-        content = {
-          type = "gpt";
-          partitions = {
-            wordpress_data = {
-              size = "100%";
-              content = {
-                type = "filesystem";
-                format = "ext4";
-                mountpoint = "/var/lib/wordpress";
-                extraArgs = [ "-L" "data" ];
-              };
-            };
-          };
-        };
-      };
+      # # --- DISCO 2: DATA WORDPRESS
+      # data = {
+      #   type = "disk";
+      #   device = "/dev/sdb";
+      #   content = {
+      #     type = "gpt";
+      #     partitions = {
+      #       wordpress_data = {
+      #         size = "100%";
+      #         content = {
+      #           type = "filesystem";
+      #           format = "ext4";
+      #           mountpoint = "/var/lib/wordpress";
+      #           extraArgs = [ "-L" "data" ];
+      #         };
+      #       };
+      #     };
+      #   };
+      # };
       
     };
   };
