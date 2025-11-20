@@ -18,7 +18,7 @@ Complete documentation is available in the docs/ directory. Below is a quick ind
 2. **[Project Architecture][architecture]**
     * Node Structure (aarch64, x86, devm)
     * Storage Configuration (Disko)
-3. **[Deployment Guide](https://www.google.com/search?q=./docs/3_deployment.md)**
+3. **[Deployment Guide][deployment]**
     * Prerequisites
     * Commands for macOS (Apple Silicon) and Linux
     * Troubleshooting common errors
